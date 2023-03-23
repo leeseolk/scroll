@@ -1,0 +1,122 @@
+body{
+    -ms-overflow-style: none;
+    }
+  
+   ::-webkit-scrollbar {
+     display: none;
+   }
+  
+   /*특정 부분 스크롤바 없애기*/
+body {
+    overflow-x: hidden;
+    background-color: #000000;
+  }
+  a{
+    text-decoration: none;
+    color: #999;
+    font-family: 'Noto Serif', serif;
+  }
+  a:hover{
+     text-decoration: none;
+     color: red;
+  }
+header{
+    text-align: center;
+}
+  #a{
+    margin-top: -50px;
+    margin-left: -8px;
+    background-image: url(29.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  section {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  section.active .imageWrap img {
+    opacity: 1;
+    visibility: visible;
+    transform : translate(0, 0);
+  }
+
+  .innerWrap {
+    position: relative;
+    z-index: 100;
+    padding: 60px;
+    width: 340px;
+    margin-top:50px;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .imageWrap {
+    position: fixed;
+    width: 70%;
+    right: 5%;
+    top: 35%;
+  }
+
+  .imageWrap img {
+    position: absolute;
+    width: 400px;
+    transition : all 1s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    transform : translate(-100px, -150px) rotate(-10deg);
+  }
+
+  .imageWrap img:nth-child(2) {
+    left: 400px;
+    top: 100px;
+    transition-delay: .2s;
+    transform : translate(100px, 150px) rotate(-10deg);
+  }
+
+  h1 {
+    color: #ffffff;
+    text-align: center;
+    padding-top : 40vh;
+    font-size: 60px;
+    font-family: 'Black Han Sans', sans-serif;
+  }
+  h5{
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+
+  }
+  h2 {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+  }
+  p {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .pointWrap {
+    position: fixed;
+    right: 3vw;
+    top: 40%;
+    z-index: 100;
+  }
+
+  .pointWrap li {
+    list-style: none;
+    width: 12px;
+    height: 12px;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: #999;
+    border-radius: 50%;
+    transition: background .1s ease-out;
+  }
+
+  .pointWrap li.active {
+    background-color: #000;
+  }
